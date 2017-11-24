@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500E8AF91FC8A31E00FBE1A3 /* TDDecimalKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 500E8AF81FC8A31E00FBE1A3 /* TDDecimalKeyboard.m */; };
 		502A60631FC8783A0085FACC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 502A60621FC8783A0085FACC /* AppDelegate.m */; };
 		502A60661FC8783A0085FACC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 502A60651FC8783A0085FACC /* ViewController.m */; };
 		502A60691FC8783A0085FACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 502A60671FC8783A0085FACC /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		500E8AF71FC8A31E00FBE1A3 /* TDDecimalKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDDecimalKeyboard.h; sourceTree = "<group>"; };
+		500E8AF81FC8A31E00FBE1A3 /* TDDecimalKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDDecimalKeyboard.m; sourceTree = "<group>"; };
 		502A605E1FC8783A0085FACC /* TD-DecimalKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TD-DecimalKeyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		502A60611FC8783A0085FACC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		502A60621FC8783A0085FACC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 				502A60621FC8783A0085FACC /* AppDelegate.m */,
 				502A60641FC8783A0085FACC /* ViewController.h */,
 				502A60651FC8783A0085FACC /* ViewController.m */,
+				500E8AF71FC8A31E00FBE1A3 /* TDDecimalKeyboard.h */,
+				500E8AF81FC8A31E00FBE1A3 /* TDDecimalKeyboard.m */,
 				502A60671FC8783A0085FACC /* Main.storyboard */,
 				502A606A1FC8783A0085FACC /* Assets.xcassets */,
 				502A606C1FC8783A0085FACC /* LaunchScreen.storyboard */,
@@ -143,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				502A60661FC8783A0085FACC /* ViewController.m in Sources */,
+				500E8AF91FC8A31E00FBE1A3 /* TDDecimalKeyboard.m in Sources */,
 				502A60711FC8783A0085FACC /* main.m in Sources */,
 				502A60631FC8783A0085FACC /* AppDelegate.m in Sources */,
 			);

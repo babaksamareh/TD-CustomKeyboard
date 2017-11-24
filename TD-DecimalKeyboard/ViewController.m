@@ -14,16 +14,28 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    // Initialize the keyboard
+    decimalKeyboard = [[TDDecimalKeyboard alloc] init];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+// Text field 1 edit did begin
+- (IBAction)textField1EditBegan:(id)sender
+{
+    // Attach the decimal keyboard
+    [decimalKeyboard setEnableAccessoryView:NO];
+    [decimalKeyboard attachKeyboardToTextField:sender];
 }
 
+// Text field 2 edit did begin
+- (IBAction)textField2EditBegan:(id)sender
+{
+    // Attach the decimal keyboard
+    [decimalKeyboard setEnableAccessoryView:YES];
+    [decimalKeyboard attachKeyboardToTextField:sender];
+}
 
 @end

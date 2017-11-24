@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TDDecimalKeyboard.h"
 
 @interface ViewController : UIViewController
+{
+    // Keyboard instance
+    TDDecimalKeyboard *decimalKeyboard;
+}
 
+@property (weak, nonatomic) IBOutlet UITextField *textField1;
+@property (weak, nonatomic) IBOutlet UITextField *textField2;
 
 @end
 
