@@ -17,7 +17,8 @@
     {
         // Set defaults
         self.enableAccessoryView = YES;
-        self.keyboardTint = [UIColor orangeColor];
+        self.screenTint = 0.4;
+        self.keyboardTint = [UIColor blueColor];
         self.highlightTint = [UIColor colorWithRed:190.0/250.0 green:190.0/250.0 blue:190.0/250.0 alpha:1.0];
     }
     
@@ -45,7 +46,7 @@
     [self createBlackMask];
     
     // Animate the black mask
-    [UIView animateWithDuration:0.25 animations:^{[blackMask setAlpha:0.4];}];
+    [UIView animateWithDuration:0.25 animations:^{[blackMask setAlpha:self.screenTint];}];
     
     // Create the keyboard
     [self createKeyboardView];
@@ -89,7 +90,7 @@
 - (void)createKeyboardView
 {
     // Set keyboard height and width
-    int keyboardWidth = 310;
+    int keyboardWidth = window.frame.size.width-2*5.0;;
     int keyboardHeight = 230;
     
     // Set padding, key dimensions, and accessory view height
