@@ -20,6 +20,8 @@
 
     // Initialize the keyboard
     decimalKeyboard = [[TDDecimalKeyboard alloc] init];
+    [decimalKeyboard setKeyboardTint:[UIColor orangeColor]];
+    [decimalKeyboard setScreenTint:0.4];
 }
 
 // Text field 1 edit did begin

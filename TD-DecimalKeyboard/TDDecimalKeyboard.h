@@ -20,6 +20,7 @@
 
 // Public properties
 @property(nonatomic)        BOOL                    enableAccessoryView;
+@property(nonatomic)        float                   screenTint;
 @property(nonatomic)        UIColor                 *keyboardTint;
 @property(nonatomic)        UIColor                 *highlightTint;
 

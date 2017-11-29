@@ -17,6 +17,7 @@
     {
         // Set defaults
         self.enableAccessoryView = YES;
+        self.screenTint = 0.4;
         self.keyboardTint = [UIColor orangeColor];
         self.highlightTint = [UIColor colorWithRed:190.0/250.0 green:190.0/250.0 blue:190.0/250.0 alpha:1.0];
     }
@@ -89,8 +90,8 @@
 - (void)createKeyboardView
 {
     // Set keyboard height and width
-    int keyboardWidth = 310;
-    int keyboardHeight = 230;
+    int keyboardWidth = window.frame.size.width-2*5.0;
+    int keyboardHeight = 240;
     
     // Set padding, key dimensions, and accessory view height
     float keyPadding = 7.0;
