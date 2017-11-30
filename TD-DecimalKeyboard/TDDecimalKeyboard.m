@@ -195,7 +195,7 @@
         [keyboardClose setFrame:CGRectMake(keyboardWidth-50.0-keyPadding, 0.0, 50.0, accessoryViewHeight+keyPadding)];
         [keyboardClose addTarget:self action:@selector(keyboardClosePressed:) forControlEvents:UIControlEventTouchUpInside];
         [keyboardClose setContentMode:UIViewContentModeCenter];
-        [keyboardClose setImage:[UIImage imageNamed:@"cancel"] forState:UIControlStateNormal];
+        [keyboardClose setImage:[UIImage imageNamed:@"keyboardClose"] forState:UIControlStateNormal];
         [keyboardClose setTintColor:[UIColor blackColor]];
         [keyboard addSubview:keyboardClose];
         
