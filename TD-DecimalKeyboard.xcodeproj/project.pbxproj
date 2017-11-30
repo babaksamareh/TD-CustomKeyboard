@@ -17,8 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		500E8AF71FC8A31E00FBE1A3 /* TDDecimalKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDDecimalKeyboard.h; sourceTree = "<group>"; };
-		500E8AF81FC8A31E00FBE1A3 /* TDDecimalKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDDecimalKeyboard.m; sourceTree = "<group>"; };
+		500E8AF71FC8A31E00FBE1A3 /* TDDecimalKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDDecimalKeyboard.h; sourceTree = "<group>"; wrapsLines = 0; };
+		500E8AF81FC8A31E00FBE1A3 /* TDDecimalKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDDecimalKeyboard.m; sourceTree = "<group>"; wrapsLines = 0; };
 		502A605E1FC8783A0085FACC /* TD-DecimalKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TD-DecimalKeyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		502A60611FC8783A0085FACC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		502A60621FC8783A0085FACC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };

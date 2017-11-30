@@ -20,7 +20,6 @@
 
     // Initialize the keyboard
     decimalKeyboard = [[TDDecimalKeyboard alloc] init];
-    [decimalKeyboard setScreenTint:0.4];
     [decimalKeyboard setKeyboardTint:[UIColor orangeColor]];
 }
 
@@ -28,6 +27,7 @@
 - (IBAction)textField1EditBegan:(id)sender
 {
     // Attach the decimal keyboard
+    [decimalKeyboard setKeyboardStyle:TDKeyboardStyleLight];
     [decimalKeyboard setEnableAccessoryView:NO];
     [decimalKeyboard attachKeyboardToTextField:sender];
 }
@@ -36,6 +36,7 @@
 - (IBAction)textField2EditBegan:(id)sender
 {
     // Attach the decimal keyboard
+    [decimalKeyboard setKeyboardStyle:TDKeyboardStyleDark];
     [decimalKeyboard setEnableAccessoryView:YES];
     [decimalKeyboard attachKeyboardToTextField:sender];
 }

@@ -9,6 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
+// Keyboard style
+typedef NS_ENUM(NSInteger, TDKeyboardStyle)
+{
+    TDKeyboardStyleLight,
+    TDKeyboardStyleDark
+};
+
 @interface TDDecimalKeyboard : NSObject
 {
     UIWindow                *window;
@@ -19,10 +26,10 @@
 }
 
 // Public properties
-@property(nonatomic)        BOOL                    enableAccessoryView;
-@property(nonatomic)        float                   screenTint;
-@property(nonatomic)        UIColor                 *keyboardTint;
-@property(nonatomic)        UIColor                 *highlightTint;
+@property(nonatomic)        BOOL                    enableAccessoryView;        // Default is NO
+@property(nonatomic)        float                   screenTint;                 // Default if 0.4
+@property(nonatomic)        UIColor                 *keyboardTint;              // Default is (57, 127, 243)
+@property(nonatomic)        TDKeyboardStyle         keyboardStyle;              // default is TDKeyboardStyleLight
 
 // Public methods
 - (void)attachKeyboardToTextField:(UITextField *)textField;

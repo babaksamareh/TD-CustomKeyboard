@@ -16,10 +16,10 @@
     if (self = [super init])
     {
         // Set defaults
-        self.enableAccessoryView = YES;
-        self.screenTint = 0.4;
-        self.keyboardTint = [UIColor blueColor];
-        self.highlightTint = [UIColor colorWithRed:190.0/250.0 green:190.0/250.0 blue:190.0/250.0 alpha:1.0];
+        [self setEnableAccessoryView:NO];
+        [self setScreenTint:0.4];
+        [self setKeyboardTint:[UIColor colorWithRed:57.0/255.0 green:127.0/255.0 blue:243.0/255.0 alpha:1.0]];
+        [self setKeyboardStyle:TDKeyboardStyleLight];
     }
     
     return self;
@@ -106,11 +106,26 @@
         keyboardHeight += accessoryViewHeight;
     }
     
+    // Set colors and assets based on default keyboard style
+    UIColor *keyboardBackGroundColor = [UIColor colorWithRed:220.0/255.0 green:222.0/255.0 blue:225.0/255.0 alpha:1.0];
+    UIColor *keysBackgroundColor = [UIColor whiteColor];
+    UIColor *keysTitleColor = [UIColor blackColor];
+    UIColor *keysHighlightColor = [UIColor colorWithRed:190.0/255.0 green:190.0/255.0 blue:190.0/255.0 alpha:1.0];
+    
+    // Update colors if keyboard style is dark
+    if (self.keyboardStyle == TDKeyboardStyleDark)
+    {
+        keyboardBackGroundColor = [UIColor colorWithRed:90.0/255.0 green:90.0/255.0 blue:90.0/255.0 alpha:1.0];
+        keysBackgroundColor = [UIColor colorWithRed:140.0/255.0 green:140.0/255.0 blue:140.0/255.0 alpha:1.0];
+        keysTitleColor = [UIColor whiteColor];
+        keysHighlightColor = [UIColor colorWithRed:190.0/255.0 green:190.0/255.0 blue:190.0/255.0 alpha:1.0];
+    }
+    
     // Create keyboard UIView
     keyboard = [[UIView alloc] initWithFrame:CGRectMake(5.0, window.frame.size.height, keyboardWidth, keyboardHeight)];
     [keyboard.layer setCornerRadius:8.0];
     [keyboard setClipsToBounds:YES];
-    [keyboard setBackgroundColor:[UIColor colorWithRed:230.0/255.0 green:230.0/255.0 blue:230.0/255.0 alpha:1.0]];
+    [keyboard setBackgroundColor:keyboardBackGroundColor];
     
     // Add swipe gesture recognizer to close the keyboard
     UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(keyboardClosePressed:)];
@@ -131,10 +146,10 @@
             UIButton *numberKey = [[UIButton alloc] initWithFrame:CGRectMake(originX, originY, keyWidth, keyHeight)];
             [numberKey addTarget:self action:@selector(keyPressed:) forControlEvents:UIControlEventTouchUpInside];
             [numberKey setTitle:keyTitle forState:UIControlStateNormal];
-            [numberKey setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             [numberKey.titleLabel setFont:[UIFont systemFontOfSize:numberKey.frame.size.height*0.5 weight:UIFontWeightMedium]];
-            [numberKey setBackgroundImage:[self imageFromColor:self.highlightTint] forState:UIControlStateHighlighted];
-            [numberKey setBackgroundColor:[UIColor whiteColor]];
+            [numberKey setTitleColor:keysTitleColor forState:UIControlStateNormal];
+            [numberKey setBackgroundColor:keysBackgroundColor];
+            [numberKey setBackgroundImage:[self imageFromColor:keysHighlightColor] forState:UIControlStateHighlighted];
             [numberKey.layer setCornerRadius:7.0];
             [numberKey setClipsToBounds:YES];
             [keyboard addSubview:numberKey];
@@ -145,10 +160,10 @@
     UIButton *zeroKey = [[UIButton alloc] initWithFrame:CGRectMake(2*keyPadding+keyWidth, 4*keyPadding+3*keyHeight+accessoryViewHeight, keyWidth, keyHeight)];
     [zeroKey addTarget:self action:@selector(keyPressed:) forControlEvents:UIControlEventTouchUpInside];
     [zeroKey setTitle:@"0" forState:UIControlStateNormal];
-    [zeroKey setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [zeroKey setTitleColor:keysTitleColor forState:UIControlStateNormal];
     [zeroKey.titleLabel setFont:[UIFont systemFontOfSize:zeroKey.frame.size.height*0.5 weight:UIFontWeightMedium]];
-    [zeroKey setBackgroundImage:[self imageFromColor:self.highlightTint] forState:UIControlStateHighlighted];
-    [zeroKey setBackgroundColor:[UIColor whiteColor]];
+    [zeroKey setBackgroundImage:[self imageFromColor:keysHighlightColor] forState:UIControlStateHighlighted];
+    [zeroKey setBackgroundColor:keysBackgroundColor];
     [zeroKey.layer setCornerRadius:7.0];
     [zeroKey setClipsToBounds:YES];
     [keyboard addSubview:zeroKey];
@@ -157,10 +172,10 @@
     UIButton *pmKey = [[UIButton alloc] initWithFrame:CGRectMake(keyPadding, 4*keyPadding+3*keyHeight+accessoryViewHeight, (keyWidth-keyPadding)/2.0, keyHeight)];
     [pmKey addTarget:self action:@selector(plusMinusPressed:) forControlEvents:UIControlEventTouchUpInside];
     [pmKey setTitle:@"±" forState:UIControlStateNormal];
-    [pmKey setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [pmKey setTitleColor:keysTitleColor forState:UIControlStateNormal];
     [pmKey.titleLabel setFont:[UIFont systemFontOfSize:pmKey.frame.size.height*0.5 weight:UIFontWeightMedium]];
-    [pmKey setBackgroundImage:[self imageFromColor:self.highlightTint] forState:UIControlStateHighlighted];
-    [pmKey setBackgroundColor:[UIColor whiteColor]];
+    [pmKey setBackgroundImage:[self imageFromColor:keysHighlightColor] forState:UIControlStateHighlighted];
+    [pmKey setBackgroundColor:keysBackgroundColor];
     [pmKey.layer setCornerRadius:7.0];
     [pmKey setClipsToBounds:YES];
     [keyboard addSubview:pmKey];
@@ -169,10 +184,10 @@
     UIButton *decimalKey = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(pmKey.frame)+keyPadding, 4*keyPadding+3*keyHeight+accessoryViewHeight, (keyWidth-keyPadding)/2.0, keyHeight)];
     [decimalKey addTarget:self action:@selector(keyPressed:) forControlEvents:UIControlEventTouchUpInside];
     [decimalKey setTitle:@"." forState:UIControlStateNormal];
-    [decimalKey setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [decimalKey setTitleColor:keysTitleColor forState:UIControlStateNormal];
     [decimalKey.titleLabel setFont:[UIFont systemFontOfSize:decimalKey.frame.size.height*0.5 weight:UIFontWeightMedium]];
-    [decimalKey setBackgroundImage:[self imageFromColor:self.highlightTint] forState:UIControlStateHighlighted];
-    [decimalKey setBackgroundColor:[UIColor whiteColor]];
+    [decimalKey setBackgroundImage:[self imageFromColor:keysHighlightColor] forState:UIControlStateHighlighted];
+    [decimalKey setBackgroundColor:keysBackgroundColor];
     [decimalKey.layer setCornerRadius:7.0];
     [decimalKey setClipsToBounds:YES];
     [keyboard addSubview:decimalKey];
@@ -181,7 +196,7 @@
     UIButton *backSpaceKey = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(zeroKey.frame)+keyPadding, 4*keyPadding+3*keyHeight+accessoryViewHeight, keyWidth, keyHeight)];
     [backSpaceKey addTarget:self action:@selector(backSpacePressed:) forControlEvents:UIControlEventTouchUpInside];
     [backSpaceKey setImage:[UIImage imageNamed:@"backspace"] forState:UIControlStateNormal];
-    [backSpaceKey setBackgroundImage:[self imageFromColor:self.highlightTint] forState:UIControlStateHighlighted];
+    [backSpaceKey setBackgroundImage:[self imageFromColor:keysHighlightColor] forState:UIControlStateHighlighted];
     [backSpaceKey setBackgroundColor:self.keyboardTint];
     [backSpaceKey.layer setCornerRadius:7.0];
     [backSpaceKey setClipsToBounds:YES];
@@ -196,13 +211,14 @@
         [keyboardClose addTarget:self action:@selector(keyboardClosePressed:) forControlEvents:UIControlEventTouchUpInside];
         [keyboardClose setContentMode:UIViewContentModeCenter];
         [keyboardClose setImage:[UIImage imageNamed:@"keyboardClose"] forState:UIControlStateNormal];
-        [keyboardClose setTintColor:[UIColor blackColor]];
+        [keyboardClose setTintColor:keysTitleColor];
         [keyboard addSubview:keyboardClose];
         
         // Add the accessory view textfield
         accessoryTextField = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 0.0, 200.0, accessoryViewHeight+keyPadding)];
         [accessoryTextField setUserInteractionEnabled:NO];
         [accessoryTextField setText:hostTextField.text];
+        [accessoryTextField setTextColor:keysTitleColor];
         [keyboard addSubview:accessoryTextField];
     }
     
