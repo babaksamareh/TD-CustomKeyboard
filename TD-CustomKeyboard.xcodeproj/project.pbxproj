@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		500E8AF91FC8A31E00FBE1A3 /* TDDecimalKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 500E8AF81FC8A31E00FBE1A3 /* TDDecimalKeyboard.m */; };
+		500E8AF91FC8A31E00FBE1A3 /* TDCustomKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 500E8AF81FC8A31E00FBE1A3 /* TDCustomKeyboard.m */; };
 		502A60631FC8783A0085FACC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 502A60621FC8783A0085FACC /* AppDelegate.m */; };
 		502A60661FC8783A0085FACC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 502A60651FC8783A0085FACC /* ViewController.m */; };
 		502A60691FC8783A0085FACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 502A60671FC8783A0085FACC /* Main.storyboard */; };
@@ -17,11 +17,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		500E8AF71FC8A31E00FBE1A3 /* TDDecimalKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDDecimalKeyboard.h; sourceTree = "<group>"; wrapsLines = 0; };
-		500E8AF81FC8A31E00FBE1A3 /* TDDecimalKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDDecimalKeyboard.m; sourceTree = "<group>"; wrapsLines = 0; };
-		502A605E1FC8783A0085FACC /* TD-DecimalKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TD-DecimalKeyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		500E8AF71FC8A31E00FBE1A3 /* TDCustomKeyboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TDCustomKeyboard.h; sourceTree = "<group>"; wrapsLines = 0; };
+		500E8AF81FC8A31E00FBE1A3 /* TDCustomKeyboard.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TDCustomKeyboard.m; sourceTree = "<group>"; wrapsLines = 0; };
+		502A605E1FC8783A0085FACC /* TD-CustomKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TD-CustomKeyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		502A60611FC8783A0085FACC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		502A60621FC8783A0085FACC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		502A60621FC8783A0085FACC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; wrapsLines = 0; };
 		502A60641FC8783A0085FACC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		502A60651FC8783A0085FACC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		502A60681FC8783A0085FACC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,7 +45,7 @@
 		502A60551FC8783A0085FACC = {
 			isa = PBXGroup;
 			children = (
-				502A60601FC8783A0085FACC /* TD-DecimalKeyboard */,
+				502A60601FC8783A0085FACC /* TD-CustomKeyboard */,
 				502A605F1FC8783A0085FACC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,35 +53,35 @@
 		502A605F1FC8783A0085FACC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				502A605E1FC8783A0085FACC /* TD-DecimalKeyboard.app */,
+				502A605E1FC8783A0085FACC /* TD-CustomKeyboard.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		502A60601FC8783A0085FACC /* TD-DecimalKeyboard */ = {
+		502A60601FC8783A0085FACC /* TD-CustomKeyboard */ = {
 			isa = PBXGroup;
 			children = (
 				502A60611FC8783A0085FACC /* AppDelegate.h */,
 				502A60621FC8783A0085FACC /* AppDelegate.m */,
 				502A60641FC8783A0085FACC /* ViewController.h */,
 				502A60651FC8783A0085FACC /* ViewController.m */,
-				500E8AF71FC8A31E00FBE1A3 /* TDDecimalKeyboard.h */,
-				500E8AF81FC8A31E00FBE1A3 /* TDDecimalKeyboard.m */,
+				500E8AF71FC8A31E00FBE1A3 /* TDCustomKeyboard.h */,
+				500E8AF81FC8A31E00FBE1A3 /* TDCustomKeyboard.m */,
 				502A60671FC8783A0085FACC /* Main.storyboard */,
 				502A606A1FC8783A0085FACC /* Assets.xcassets */,
 				502A606C1FC8783A0085FACC /* LaunchScreen.storyboard */,
 				502A606F1FC8783A0085FACC /* Info.plist */,
 				502A60701FC8783A0085FACC /* main.m */,
 			);
-			path = "TD-DecimalKeyboard";
+			path = "TD-CustomKeyboard";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		502A605D1FC8783A0085FACC /* TD-DecimalKeyboard */ = {
+		502A605D1FC8783A0085FACC /* TD-CustomKeyboard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 502A60741FC8783A0085FACC /* Build configuration list for PBXNativeTarget "TD-DecimalKeyboard" */;
+			buildConfigurationList = 502A60741FC8783A0085FACC /* Build configuration list for PBXNativeTarget "TD-CustomKeyboard" */;
 			buildPhases = (
 				502A605A1FC8783A0085FACC /* Sources */,
 				502A605B1FC8783A0085FACC /* Frameworks */,
@@ -91,9 +91,9 @@
 			);
 			dependencies = (
 			);
-			name = "TD-DecimalKeyboard";
+			name = "TD-CustomKeyboard";
 			productName = "TD-DecimalKeyboard";
-			productReference = 502A605E1FC8783A0085FACC /* TD-DecimalKeyboard.app */;
+			productReference = 502A605E1FC8783A0085FACC /* TD-CustomKeyboard.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -111,7 +111,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 502A60591FC8783A0085FACC /* Build configuration list for PBXProject "TD-DecimalKeyboard" */;
+			buildConfigurationList = 502A60591FC8783A0085FACC /* Build configuration list for PBXProject "TD-CustomKeyboard" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -124,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				502A605D1FC8783A0085FACC /* TD-DecimalKeyboard */,
+				502A605D1FC8783A0085FACC /* TD-CustomKeyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -148,7 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				502A60661FC8783A0085FACC /* ViewController.m in Sources */,
-				500E8AF91FC8A31E00FBE1A3 /* TDDecimalKeyboard.m in Sources */,
+				500E8AF91FC8A31E00FBE1A3 /* TDCustomKeyboard.m in Sources */,
 				502A60711FC8783A0085FACC /* main.m in Sources */,
 				502A60631FC8783A0085FACC /* AppDelegate.m in Sources */,
 			);
@@ -286,9 +286,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 258KLFD3QU;
-				INFOPLIST_FILE = "TD-DecimalKeyboard/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/TD-CustomKeyboard/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "touchDev.TD-DecimalKeyboard";
+				PRODUCT_BUNDLE_IDENTIFIER = "touchDev.TD-CustomKeyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,9 +300,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 258KLFD3QU;
-				INFOPLIST_FILE = "TD-DecimalKeyboard/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/TD-CustomKeyboard/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "touchDev.TD-DecimalKeyboard";
+				PRODUCT_BUNDLE_IDENTIFIER = "touchDev.TD-CustomKeyboard";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -311,7 +311,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		502A60591FC8783A0085FACC /* Build configuration list for PBXProject "TD-DecimalKeyboard" */ = {
+		502A60591FC8783A0085FACC /* Build configuration list for PBXProject "TD-CustomKeyboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				502A60721FC8783A0085FACC /* Debug */,
@@ -320,7 +320,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		502A60741FC8783A0085FACC /* Build configuration list for PBXNativeTarget "TD-DecimalKeyboard" */ = {
+		502A60741FC8783A0085FACC /* Build configuration list for PBXNativeTarget "TD-CustomKeyboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				502A60751FC8783A0085FACC /* Debug */,

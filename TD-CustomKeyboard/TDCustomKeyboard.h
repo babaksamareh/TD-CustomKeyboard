@@ -1,6 +1,6 @@
 //
 //  TDCustomKeyboard.h
-//  TD-DecimalKeyboard
+//  TD-CustomKeyboard
 //
 //  Created by Babak Samareh on 2017-11-24.
 //  Copyright © 2017 touchDev. All rights reserved.
@@ -16,7 +16,7 @@ typedef NS_ENUM(NSInteger, TDKeyboardStyle)
     TDKeyboardStyleDark
 };
 
-@interface TDDecimalKeyboard : NSObject
+@interface TDCustomKeyboard : NSObject
 {
     UIWindow                *window;
     UIView                  *blackMask;

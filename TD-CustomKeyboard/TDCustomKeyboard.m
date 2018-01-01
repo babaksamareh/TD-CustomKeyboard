@@ -1,14 +1,14 @@
 //
 //  TDCustomKeyboard.m
-//  TD-DecimalKeyboard
+//  TD-CustomKeyboard
 //
 //  Created by Babak Samareh on 2017-11-24.
 //  Copyright © 2017 touchDev. All rights reserved.
 //
 
-#import "TDDecimalKeyboard.h"
+#import "TDCustomKeyboard.h"
 
-@implementation TDDecimalKeyboard
+@implementation TDCustomKeyboard
 
 // Initialization
 - (id)init
@@ -180,17 +180,17 @@
     [pmKey setClipsToBounds:YES];
     [keyboard addSubview:pmKey];
     
-    // Generate the decimal key
-    UIButton *decimalKey = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(pmKey.frame)+keyPadding, 4*keyPadding+3*keyHeight+accessoryViewHeight, (keyWidth-keyPadding)/2.0, keyHeight)];
-    [decimalKey addTarget:self action:@selector(keyPressed:) forControlEvents:UIControlEventTouchUpInside];
-    [decimalKey setTitle:@"." forState:UIControlStateNormal];
-    [decimalKey setTitleColor:keysTitleColor forState:UIControlStateNormal];
-    [decimalKey.titleLabel setFont:[UIFont systemFontOfSize:decimalKey.frame.size.height*0.5 weight:UIFontWeightMedium]];
-    [decimalKey setBackgroundImage:[self imageFromColor:keysHighlightColor] forState:UIControlStateHighlighted];
-    [decimalKey setBackgroundColor:keysBackgroundColor];
-    [decimalKey.layer setCornerRadius:7.0];
-    [decimalKey setClipsToBounds:YES];
-    [keyboard addSubview:decimalKey];
+    // Generate the custom key
+    UIButton *customKey = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(pmKey.frame)+keyPadding, 4*keyPadding+3*keyHeight+accessoryViewHeight, (keyWidth-keyPadding)/2.0, keyHeight)];
+    [customKey addTarget:self action:@selector(keyPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [customKey setTitle:@"." forState:UIControlStateNormal];
+    [customKey setTitleColor:keysTitleColor forState:UIControlStateNormal];
+    [customKey.titleLabel setFont:[UIFont systemFontOfSize:customKey.frame.size.height*0.5 weight:UIFontWeightMedium]];
+    [customKey setBackgroundImage:[self imageFromColor:keysHighlightColor] forState:UIControlStateHighlighted];
+    [customKey setBackgroundColor:keysBackgroundColor];
+    [customKey.layer setCornerRadius:7.0];
+    [customKey setClipsToBounds:YES];
+    [keyboard addSubview:customKey];
     
     // Generate the backspace key
     UIButton *backSpaceKey = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(zeroKey.frame)+keyPadding, 4*keyPadding+3*keyHeight+accessoryViewHeight, keyWidth, keyHeight)];
